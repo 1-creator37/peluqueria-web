@@ -1,3 +1,3 @@
 function reservar(){
-    alert("Próximamente podrás reservar tu cita.");
+    window.location.href="reserva.html";
 }
