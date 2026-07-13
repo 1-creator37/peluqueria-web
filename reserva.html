@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservar Cita</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>💈 Barber Studio</h1>
+</header>
+
+<section class="hero">
+
+<h2>Reserva tu cita</h2>
+
+<form>
+
+<label>Nombre</label><br>
+<input type="text" placeholder="Tu nombre"><br><br>
+
+<label>Servicio</label><br>
+<select id="servicio">
+<option value="10">Corte - $10</option>
+<option value="5">Barba - $5</option>
+<option value="20">Tintura - $20</option>
+<option value="3">Lavado - $3</option>
+</select>
+
+<br><br>
+
+<label>Fecha</label><br>
+<input type="date">
+
+<br><br>
+
+<label>Hora</label><br>
+<input type="time">
+
+<br><br>
+
+<button type="button" onclick="calcular()">Calcular Total</button>
+
+<h2 id="total">$0</h2>
+
+</form>
+
+</section>
+
+<script>
+function calcular(){
+
+let precio = document.getElementById("servicio").value;
+
+document.getElementById("total").innerHTML =
+"Total: $" + precio;
+
+}
+</script>
+
+</body>
+</html>
